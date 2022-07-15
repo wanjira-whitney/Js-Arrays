@@ -1,0 +1,22 @@
+//Question 1
+let fruits = {
+    fruitsList: {'Apples':30,'Grapes':100, 'Bananas':10 ,'Pineapples':50, 'Strawberries': 200},
+    price: function (fruit,quantity){
+        return `${quantity} ${fruit}${'s'} for KES ${this.fruitsList[fruit]*quantity}`
+    }
+    
+}
+console.log(fruits.price('Pineapple',5))
+
+class KioskCalc{ 
+    constructor(fruit, quantity){ 
+        this.fruit = fruit,
+        this.quantity = quantity,
+        this.priceList = { 'Apples': 30, 'Grapes': 100, 'Bananas': 20, 'Pineapples': 50, 'Strawberries': 200 },
+        this.getTotal = function(){
+      return `${this.quantity} ${this.fruit} for KES ${this.quantity*this.priceList[this.fruit]}`
+    }
+    }
+    }
+    let kioskCalc =new KioskCalc('Strawberries', 5);
+    console.log(kioskCalc.getTotal())
